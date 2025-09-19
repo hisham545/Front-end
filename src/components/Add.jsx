@@ -8,7 +8,7 @@ function Add() {
     formdata.append("title", title);
     formdata.append("desc", desc);
     formdata.append("image", file);
-    fetch("https://back-end-plum-delta.vercel.app/add", {
+    fetch("http://localhost:5000/add", {
       method: "post",
       body: formdata,
     })

@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 function Fav() {
   let [fav, setfav] = useState([]);
   useEffect(() => {
-    fetch("https://back-end-plum-delta.vercel.app/fav")
+    fetch("http://localhost:5000/fav")
       .then((resizeBy) => resizeBy.json())
       .then((data) => setfav(data));
   }, []);
   function del(id) {
-    fetch(`https://back-end-plum-delta.vercel.app/fav/${id}`, {
+    fetch(`http://localhost:5000/fav/${id}`, {
       method: "delete",
     })
       .then((res) => res.json())
