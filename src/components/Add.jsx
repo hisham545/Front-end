@@ -8,7 +8,7 @@ function Add() {
     formdata.append("title", title);
     formdata.append("desc", desc);
     formdata.append("image", file);
-    fetch("http://localhost:5000/add", {
+    fetch("https://my-backend.vercel.app/add", {
       method: "post",
       body: formdata,
     })

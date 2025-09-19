@@ -14,7 +14,7 @@ function Section({ mode }) {
       feer.current.play().catch((err) => {
         console.log("المتصفح مانع التشغيل التلقائي:", err);
       });
-      fetch("http://localhost:5000")
+      fetch("https://my-backend.vercel.app")
         .then((res) => res.json())
         .then((data) => setRecipe(data));
     }
@@ -22,10 +22,10 @@ function Section({ mode }) {
     fetch("/food")
       .then((res) => res.json())
       .then((data) => setRecipe(data));
-  },[]);
+  }, []);
 
   function add1(food) {
-    fetch("http://localhost:5000", {
+    fetch("https://my-backend.vercel.app", {
       headers: { "content-type": "application/json" },
       method: "POST",
       body: JSON.stringify({
@@ -40,7 +40,7 @@ function Section({ mode }) {
   }
 
   function delete1(id) {
-    fetch(`http://localhost:5000/${id}`, { method: "DELETE" })
+    fetch(`https://my-backend.vercel.app/${id}`, { method: "DELETE" })
       .then((res) => res.json())
       .then((door) => console.log(door));
   }
