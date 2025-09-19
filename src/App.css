@@ -94,6 +94,7 @@ div.rood{
 .h2{
     text-shadow: 1px 1px 1px white;
 }
+
 div.rec{
     height:100%
 }
@@ -129,6 +130,25 @@ div.rec{
     }
     div.rec{
         margin-left: 70px;
+    }
+    .cl-userButtonAvatarBox{
+        position: relative;
+        right: 18px;
+    }
+    div.cl-userButtonPopoverCard{
+        
+        left: 0;
+        
+    }
+    /* .cl-userButtonPopoverRootBox{
+        position: fixed;
+        left: 0;
+        z-index: 1000;
+            width: 100%;
+    
+    } */
+    .hover-area{
+        width: 100%;
     }
     
     .add1{
@@ -192,6 +212,9 @@ footer{
     border-radius: 3px;
     
     transition: 1s;
+}
+.d8{
+    width: 100%;
 }
 .rt:hover::after{
     box-shadow: 1px 1px 1px 2pxpx black;

@@ -3,6 +3,7 @@ import imge from "../hum.png";
 import Footer from "./Footer";
 import { HashLink } from "react-router-hash-link";
 import Vid from "./0918.mp4";
+import FR from "../svg.png";
 function Section({ mode }) {
   let [recipe, setRecipe] = useState([]);
   let feer = useRef(null);
@@ -21,7 +22,7 @@ function Section({ mode }) {
     fetch("/food")
       .then((res) => res.json())
       .then((data) => setRecipe(data));
-  });
+  },[]);
 
   function add1(food) {
     fetch("http://localhost:5000", {
@@ -69,13 +70,7 @@ function Section({ mode }) {
           <img className="d7" width={400} src={imge} alt="cover" />
         </div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#ff5500"
-            fillOpacity="1"
-            d="M0,256L48,245.3C96,235,192,213,288,218.7C384,224,480,256,576,256C672,256,768,224,864,213.3C960,203,1056,213,1152,229.3C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></path>
-        </svg>
+        <img className="d8" src={FR} />
       </div>
 
       <main className={`re bg-${mode}`}>

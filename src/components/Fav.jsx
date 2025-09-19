@@ -6,7 +6,7 @@ function Fav() {
     fetch("http://localhost:5000/fav")
       .then((resizeBy) => resizeBy.json())
       .then((data) => setfav(data));
-  });
+  }, []);
   function del(id) {
     fetch(`http://localhost:5000/fav/${id}`, { method: "delete" })
       .then((res) => res.json())

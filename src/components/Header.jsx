@@ -51,9 +51,9 @@ function Header({ mode, setmode }) {
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-center flex-grow-1 pe-3">
               <li className="nav-item">
-                <Link className="nav-link rt active" to="/">
+                <a className="nav-link rt active" href="/">
                   Home
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link rt active" href="/add">
