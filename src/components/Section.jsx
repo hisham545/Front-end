@@ -14,7 +14,7 @@ function Section({ mode }) {
       feer.current.play().catch((err) => {
         console.log("المتصفح مانع التشغيل التلقائي:", err);
       });
-      fetch("https://my-backend.vercel.app")
+      fetch("https://back-end-plum-delta.vercel.app")
         .then((res) => res.json())
         .then((data) => setRecipe(data));
     }
@@ -25,7 +25,7 @@ function Section({ mode }) {
   }, []);
 
   function add1(food) {
-    fetch("https://my-backend.vercel.app", {
+    fetch("https://back-end-plum-delta.vercel.app/", {
       headers: { "content-type": "application/json" },
       method: "POST",
       body: JSON.stringify({
@@ -40,7 +40,7 @@ function Section({ mode }) {
   }
 
   function delete1(id) {
-    fetch(`https://my-backend.vercel.app/${id}`, { method: "DELETE" })
+    fetch(`https://back-end-plum-delta.vercel.app/${id}`, { method: "DELETE" })
       .then((res) => res.json())
       .then((door) => console.log(door));
   }
