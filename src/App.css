@@ -1,0 +1,433 @@
+body{
+    overflow-x: hidden;
+}
+.main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-content: center;
+}
+.main article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.food{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.re{
+    height: 100vh;
+}
+.h1{
+    text-align: center;
+    padding: 5;
+    color: blue;
+    text-shadow: 1px 1px 5px white;
+    text-decoration: underline;
+}
+.add{
+    height: 100vh;
+    display: flex;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxW3Y2z6e1HcfnfjysDZM2bkyx1hfQDYINcA&s);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.add input,textarea{
+    width: 400px;
+    margin: 5px;
+    text-shadow: 1px 1px 1px white;
+    background:transparent;
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+}
+.add a{
+    width: 100%;
+}
+.add input{
+    height: 30px;
+}
+.add textarea{
+    height: 100px;
+}
+.add1{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    border: solid 5px rgba(0, 187, 255, 0.257);
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 350px;
+    align-content: center;
+}
+
+div.rood{
+   
+    height: fit-content;
+    margin-left:10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+   
+    
+}
+.geed{
+   width: 100%;
+   height: fit-content;
+}
+.h2{
+    text-shadow: 1px 1px 1px white;
+}
+div.rec{
+    height:100%
+}
+@media (max-width:1000px){
+    div.rood{
+          display: grid;
+    grid-template-columns: repeat(4,1fr);
+    }
+}
+@media (max-width:860px){
+    div.rood{
+          display: grid;
+    grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (max-width:770px){
+    div.food{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}
+@media (max-width:680px){
+    div.rood{
+          display: grid;
+    grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:450px){
+    div.rood{
+          display: grid;
+    grid-template-columns: repeat(1,1fr);
+    }
+    div.rec{
+        margin-left: 70px;
+    }
+    
+    .add1{
+        width: 300px;
+    }
+    .add input,textarea{
+        width: 100%;
+    }
+}
+.re{
+    height: fit-content;
+}
+.desc1{
+    width: 200px;
+    height: 134px;
+    overflow-y: auto;
+}
+.rec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    align-content: center;
+    width: fit-content;
+    margin-left: 1px;
+}
+div.deed{
+    width: fit-content;
+}
+.rec button{
+    margin-top: 3px;
+}
+.rest{
+    width: 50px;
+    border-radius: 50px;
+    margin-left: 10px;
+    box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.725);
+
+}
+.goor{
+    text-shadow: 0px 1px 1px white;
+}
+footer{
+    text-shadow: 1px 1px 1px white;
+}
+.rt{
+    position: relative;
+}
+.cl-userButtonAvatarImage{
+   
+    padding: 1px;
+}
+.rt::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    height: 3px;
+    width: 0px;
+    border-radius: 3px;
+    
+    transition: 1s;
+}
+.rt:hover::after{
+    box-shadow: 1px 1px 1px 2pxpx black;
+    width: 100%;
+}
+.fav{
+    display: grid;
+   grid-template-columns: repeat(2,1fr);
+   
+   
+}
+.fa img{
+    width: 400px;
+    height: 400px;
+}
+.fa{
+    width: fit-content;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.desc2{
+    width: 400px;
+    margin-top: 10px;
+    height: 47.98px;
+    overflow-y: auto;
+}
+.b1{
+    margin-top: 5px;
+}
+.foop{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+.t1{
+ width: fit-content;
+   
+}
+.fa{
+    z-index: 100;
+}
+.goo{
+    background: url(https://png.pngtree.com/thumb_back/fh260/background/20230712/pngtree-3d-rendered-burger-with-explosive-presentation-image_3841356.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 100vh;
+}
+html{
+    --reed:1s
+}
+.register{
+    height: fit-content;
+    padding: 10px;
+    width: 350px;
+    border: solid rgba(4, 122, 141, 0.672) 1px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+.register input{
+    background-color: transparent;
+    backdrop-filter: blur(3px);
+}
+.ned{
+    position: relative;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: end;
+}
+.register img{
+ padding: 10px;
+ margin-left: 120px;
+ margin-bottom: 30px;
+}
+.Fr{
+    height: 100vh;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url(https://www.sfari.com/wp-content/uploads/2022/09/%D8%A7%D9%81%D8%B6%D9%84-%D9%85%D8%B7%D8%A7%D8%B9%D9%85-%D8%A7%D9%84%D8%AE%D9%81%D8%AC%D9%8A-%D8%A7%D9%84%D8%AA%D9%8A-%D9%86%D9%86%D8%B5%D8%AD%D9%83%D9%85-%D8%A8%D8%B2%D9%8A%D8%A7%D8%B1%D8%AA%D9%87%D8%A7-640x360.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-content: center;
+}
+.Fr .cl-rootBox{
+   margin-top: 80px;
+}
+.Fr .cl-rootBox .cl-footerActionLink{
+    margin-left: 10px;
+}
+
+.Fr span{
+    padding: 3px;
+}
+.do{
+    text-decoration: none;
+    position: absolute;
+    left: 3px;
+    top: 10px;
+}
+.cl-avatarBox{
+    margin-left: 10px;
+}
+.cl-userPreviewMainIdentifierText{
+    margin-left: 30px;
+}
+.cl-userPreviewSecondaryIdentifier{
+    margin-left: 23px;
+}
+div.rec{
+    animation: you var(--reed) linear;
+}
+div.rood{
+    overflow-y: hidden;
+}
+@media (min-width:880px){
+   @keyframes you{
+   
+   from{
+    transform: translateY(100px);
+   }
+   
+} 
+}
+.head{
+    margin: 1px;
+    margin-left: 15px;
+    margin-top: 3px;
+}
+.head img,span{
+    scale: 1.2;
+}
+.head p{
+    display: none;
+}
+.rt1{
+    z-index: 1;
+}
+.d7{
+    opacity: 0.3;
+}
+.food{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.main{
+    position: relative;
+}
+.main video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: 0;
+    object-fit: cover;   /* يخلي الفيديو يغطي الشاشة كلها */      /* يخلي الفيديو ورا باقي المحتوى */
+}
+@media (max-width:910px){
+    div.fav{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+
+}
+      .rt:hover::after{
+    width: 0px;
+    
+    
+    
+}
+} 
+@media (max-width:390px) {
+        div.fav{
+            position: relative;
+            right: 50px;
+        }
+        article{
+            position: relative;
+            top: 50px;
+        }
+        .head{
+            position: absolute;
+            top: 50px;
+            left: 0px;
+           
+            
+        }
+        .d7{
+            margin-top: 4px;
+            scale: 0.8;
+        }
+        .food{
+            position: relative;
+            top: 50px;
+        }
+              .rt:hover::after{
+    width: 0px;
+    
+    
+    
+}
+       
+
+}
+@media (max-width:929px){
+      .head{
+            position: absolute;
+            top: 300px;
+            margin-left: -15px;
+            left: 50px;
+        }
+        .rt:hover::after{
+    width: 0px;
+    
+    
+    
+}
+}
+@media (max-width:804px){
+    .food{
+        margin-top: 150px;
+    }
+}
+
