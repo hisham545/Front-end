@@ -48,7 +48,7 @@ function Section({ mode }) {
   return (
     <div data-bs-theme={mode} className={`reed1 bg-dark`}>
       <div className="main">
-        <video ref={feer} loop muted width="600">
+        <video autoPlay ref={feer} loop muted width="600">
           <source src={Vid} type="video/mp4" />
           المتصفح بتاعك لا يدعم تشغيل الفيديو
         </video>
