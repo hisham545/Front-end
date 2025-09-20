@@ -257,6 +257,9 @@ footer{
     align-items: center;
     z-index: 0;
 }
+.fav{
+    margin: 3px;
+}
 .t1{
  width: fit-content;
    
