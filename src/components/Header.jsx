@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import {
   SignedIn,
   SignedOut,
@@ -7,11 +6,17 @@ import {
 } from "@clerk/clerk-react";
 import Geed from "../rest.jpg";
 import { useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useRef } from "react";
 
 function Header({ mode, setmode }) {
   let home = useLocation().pathname.includes("/");
   let home1 = useLocation().pathname.includes("/add");
   let home2 = useLocation().pathname.includes("/fav");
+  let root = useRef("");
+  function roog() {
+    root.current.click();
+  }
   return (
     <nav
       className={`navbar navbar-expand-lg fixed-top bg-${mode}`}
@@ -41,6 +46,7 @@ function Header({ mode, setmode }) {
               Food Recipes
             </h5>
             <button
+              ref={root}
               type="button"
               className="btn-close"
               data-bs-dismiss="offcanvas"
@@ -51,22 +57,31 @@ function Header({ mode, setmode }) {
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-center flex-grow-1 pe-3">
               <li className="nav-item">
-                <a className="nav-link rt active" href="/">
+                <NavLink onClick={roog} className="nav-link rt active" to="/">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link rt active" href="/add">
+                <NavLink
+                  onClick={roog}
+                  className="nav-link rt active"
+                  to="/add"
+                >
                   Add Recipes
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link rt active" href="/fav">
+                <NavLink
+                  onClick={roog}
+                  className="nav-link rt active"
+                  to="/fav"
+                >
                   Favourites
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
                 <a
+                  onClick={roog}
                   href={home && !home1 && !home2 && "#re"}
                   className="nav-link"
                 >

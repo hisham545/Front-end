@@ -98,11 +98,7 @@ div.rood{
 div.rec{
     height:100%
 }
-@media (min-height:809px){
-    .food{
-        margin-bottom: 50px;
-    }
-}
+
 @media (max-width:1000px){
     div.rood{
           display: grid;
