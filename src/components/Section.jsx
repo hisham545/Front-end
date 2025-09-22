@@ -4,10 +4,11 @@ import Footer from "./Footer";
 import { HashLink } from "react-router-hash-link";
 import Vid from "./0918.mp4";
 import FR from "../svg.png";
+import { useUser } from "@clerk/clerk-react";
 function Section({ mode }) {
   let [recipe, setRecipe] = useState([]);
   let feer = useRef(null);
-
+  let { user, isSignedIn } = useUser();
   // تشغيل الفيديو بعد ما الكومبوننت يركب
   useEffect(() => {
     if (feer.current) {
@@ -92,14 +93,22 @@ function Section({ mode }) {
                   />
                   <div className="desc1 goor ">{food.desc}</div>
                   <a
-                    href="/fav"
-                    onClick={() => add1(food)}
+                    href={isSignedIn && "/fav"}
+                    onClick={() => {
+                      isSignedIn
+                        ? add1(food)
+                        : window.alert("Please sign in first");
+                    }}
                     className="rounded-3 feed1 btn btn-outline-danger"
                   >
                     Add favorite
                   </a>
                   <button
-                    onClick={() => delete1(food._id)}
+                    onClick={() => {
+                      isSignedIn
+                        ? delete1(food._id)
+                        : window.alert("Please sign in first");
+                    }}
                     className="btn btn-outline-success mt-1"
                   >
                     delete the recipe
